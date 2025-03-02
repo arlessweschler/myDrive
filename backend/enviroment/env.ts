@@ -4,7 +4,7 @@ export default {
   passwordAccess: process.env.PASSWORD_ACCESS,
   passwordRefresh: process.env.PASSWORD_REFRESH,
   passwordCookie: process.env.PASSWORD_COOKIE,
-  createAcctBlocked: process.env.BLOCK_CREATE_ACCOUNT,
+  createAcctBlocked: process.env.BLOCK_CREATE_ACCOUNT === "true",
   root: process.env.ROOT,
   url: process.env.URL,
   mongoURL: process.env.MONGODB_URL,
@@ -31,6 +31,9 @@ export default {
     ? +process.env.TEMP_VIDEO_THUMBNAIL_LIMIT
     : 0,
   docker: process.env.DOCKER === "true",
+  httpsKeyPath: process.env.HTTPS_KEY_PATH,
+  httpsCaPath: process.env.HTTPS_CA_PATH,
+  httpsCrtPath: process.env.HTTPS_CRT_PATH,
 };
 
 module.exports = {
@@ -39,7 +42,7 @@ module.exports = {
   passwordAccess: process.env.PASSWORD_ACCESS,
   passwordRefresh: process.env.PASSWORD_REFRESH,
   passwordCookie: process.env.PASSWORD_COOKIE,
-  createAcctBlocked: process.env.BLOCK_CREATE_ACCOUNT,
+  createAcctBlocked: process.env.BLOCK_CREATE_ACCOUNT === "true",
   root: process.env.ROOT,
   url: process.env.URL,
   mongoURL: process.env.MONGODB_URL,
@@ -66,4 +69,7 @@ module.exports = {
     ? +process.env.TEMP_VIDEO_THUMBNAIL_LIMIT
     : 0,
   docker: process.env.DOCKER === "true",
+  httpsKeyPath: process.env.HTTPS_KEY_PATH,
+  httpsCaPath: process.env.HTTPS_CA_PATH,
+  httpsCrtPath: process.env.HTTPS_CRT_PATH,
 };
